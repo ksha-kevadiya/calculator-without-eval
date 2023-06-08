@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Dosis');
+ #calculatorBody{
+  width: 360px;
+  background: 	#47acb7;
+  margin: auto;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px;
+}
+
+#answer{
+  width: 225px;
+  display: inline-block;
+  text-align: right;
+  font-family: 'Dosis', sans-serif;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgb(227, 199, 199);
+}
+input {
+  cursor: pointer;
+  width: 65px;
+  height: 65px;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 20px;
+  margin: 10px; 
+  font-family: 'Dosis', sans-serif;
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 4px;
+  
+}
+#AC {
+   background: #6cd492;
+}
+#equals{
+  background: #c9af66;
+}
+</style>
+<body>
+    <center>
+        <h1>Calculator Application</h1>
+    </center>
+    <div id="calculatorBody"> 
+        <div>  <input id="AC" type="button" onclick="clearAll()" value="AC"/> <span id="answer">0</span>  </div>
+          <div class="row">
+                     
+                     
+        </div>
+          <div class="row">
+              <input type="button" onclick="numericButton('7')" value="7"/>
+              <input type="button" onclick="numericButton('8')" value="8"/>
+              <input type="button"  onclick="numericButton('9')" value="9"/>
+              <input type="button" onclick="operatorButton('+')" value="+"/>
+        </div>
+          <div class="row">
+              <input type="button"  onclick="numericButton('4')" value="4"/>
+              <input type="button" onclick="numericButton('5')" value="5"/>
+              <input type="button"  onclick="numericButton('6')" value="6"/>
+            <input type="button" onclick="operatorButton('-')" value="-"/>
+        </div>
+          <div class="row">
+              <input type="button"  onclick="numericButton('1')" value="1"/>
+              <input type="button"  onclick="numericButton('2')" value="2"/>
+              <input type="button"  onclick="numericButton('3')" value="3"/>
+              <input type="button" onclick="operatorButton('*')" value="*"/>
+        </div>
+          <div class="row">
+             <input type="button"  onclick="numericButton('0')" value="0"/>
+             <input type="button" onclick="numericButton('.')" value="."/>
+             <input id="equals" type="button"  onclick="calculateQueue(queue)" value="="/>
+             <input type="button" onclick="operatorButton('/')" value="/"/>
+                  
+        
+        </div>
+        </div>
+    <script src="without_eval.js"></script>        
+</body>
+</html>
